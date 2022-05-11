@@ -1,0 +1,49 @@
+.responses-container {
+  display: flex;
+  justify-content: center;
+}
+
+.responses {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #212121;
+  border-radius: 15px;
+  box-shadow: inset -5px -5px 20px rgba(255, 255, 255, 0.03),
+    inset 8px 8px 20px rgb(0, 0, 0, 0.2);
+  width: 30rem;
+  min-height: 20rem;
+  padding: 3rem;
+  flex: 1 0 auto;
+}
+
+.response h2 {
+  margin-bottom: 2rem;
+  color: grey;
+}
+
+.response p {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+/* ========== no responses */
+
+.suggestions {
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+}

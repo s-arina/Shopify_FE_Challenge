@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import '../CSS/App.css';
 import Modal from './Modal';
-const { Configuration, OpenAIApi } = require('openai');
+import Responses from './Responses';
+import Form from './Form';
+import { Configuration, OpenAIApi } from 'openai';
 
 function App() {
   // api key
@@ -55,45 +57,33 @@ function App() {
       });
   }
 
-  console.log(responses);
-
-  return (
-    <div className='app'>
-      {modal && <Modal setModal={setModal} setResponses={setResponses} />}
-      <form className='prompt-form' onSubmit={onSubmit}>
-        <label htmlFor='prompt'>Enter prompt:</label>
-        <input
-          type='text'
-          name='prompt'
-          id='prompt'
-          required
-          onChange={(e) => setPrompt(e.target.value)}
-        ></input>
-        <button type='submit'>Submit</button>
-      </form>
-      {responses ? (
-        <div className='responses'>
-          {responses
-            .sort((a, b) => b.date.localeCompare(a.date))
-            .map((response) => (
-              <div className='response' key={response.date}>
-                <h3>{response.prompt}</h3>
-                <h2>{response.data}</h2>
-                <br />
-                <br />
-              </div>
-            ))}
-        </div>
-      ) : null}
-      {responses && responses.length > 0 ? (
+  let clearAllButton = null;
+  if (responses && responses.length > 0) {
+    clearAllButton = (
+      <div className='clear-all'>
         <button
+          className='clear-btn'
           onClick={() => {
             setModal(true);
           }}
         >
-          Clear All
+          Clear all
         </button>
-      ) : null}
+      </div>
+    );
+  }
+
+  return (
+    <div className='app'>
+      {modal && <Modal setModal={setModal} setResponses={setResponses} />}
+      <div className='type-box'>
+        <div className='typed'>
+          <h1>Fun with AI!</h1>
+        </div>
+      </div>
+      <Form onSubmit={onSubmit} setPrompt={setPrompt} loading={loading} />
+      {clearAllButton}
+      <Responses responses={responses} />
     </div>
   );
 }

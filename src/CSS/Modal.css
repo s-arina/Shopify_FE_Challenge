@@ -1,0 +1,56 @@
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 1;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  min-height: 12rem;
+  width: 30rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.confirm-btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.confirm-btns button {
+  border: none;
+  border-radius: 20px;
+  background-color: #212121;
+  color: white;
+  padding: 1rem 2rem;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.confirm-btns button:first-of-type {
+  background-color: black;
+  opacity: 50%;
+}
+
+.confirm-btns button:first-of-type:hover {
+  background-color: #212121;
+  opacity: 100%;
+}
+
+.confirm-btns button:nth-of-type(2):hover {
+  background-color: red;
+}
