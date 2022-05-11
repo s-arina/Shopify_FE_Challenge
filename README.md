@@ -7,3 +7,5 @@ An app that sends plain text prompts to the OpenAI API and displays the results 
 - Responses are saved in the user's local storage with the option to clear all results if desired.
 
 - Users can choose which AI engine to use.
+
+![alt text](https://github.com/s-arina/Shopify_FE_Challenge/blob/main/public/shopify_challenge.png)
