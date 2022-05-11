@@ -1,4 +1,5 @@
 import React from 'react';
+import '../CSS/Form.css';
 
 function Form({ onSubmit, setPrompt, loading }) {
   return (

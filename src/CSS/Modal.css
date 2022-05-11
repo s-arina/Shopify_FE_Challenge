@@ -21,17 +21,16 @@
   min-height: 12rem;
   width: 30rem;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 2rem;
   gap: 2rem;
 }
 
-.confirm-btns {
+.modal-btns {
   display: flex;
   gap: 2rem;
 }
 
-.confirm-btns button {
+.modal-btns button {
   border: none;
   border-radius: 20px;
   background-color: #212121;
@@ -41,16 +40,14 @@
   transition: all 0.2s;
 }
 
-.confirm-btns button:first-of-type {
-  background-color: black;
-  opacity: 50%;
+.modal-btns button:first-of-type {
+  background-color: grey;
 }
 
-.confirm-btns button:first-of-type:hover {
+.modal-btns button:first-of-type:hover {
   background-color: #212121;
-  opacity: 100%;
 }
 
-.confirm-btns button:nth-of-type(2):hover {
+.modal-btns button:nth-of-type(2):hover {
   background-color: red;
 }

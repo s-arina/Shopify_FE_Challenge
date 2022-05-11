@@ -17,10 +17,11 @@ function Responses({ responses }) {
         </div>
       ) : (
         <div className='suggestions'>
-          <h2>Suggestions:</h2>
+          <h1>Need ideas?</h1>
           <p>Who invented the computer?</p>
           <p>Write a poem about spring.</p>
-          <p>Cute dog name suggestions.</p>
+          <p>Cute dog name suggestions!</p>
+          <p>What does console.log('123' + 456) print?</p>
         </div>
       )}
     </div>

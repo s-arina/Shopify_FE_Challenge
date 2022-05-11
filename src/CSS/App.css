@@ -5,12 +5,23 @@
   padding: 5rem;
   font-size: 1.2rem;
   text-align: center;
+  position: relative;
+  min-height: 100vh;
+  flex: 1 1 auto;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
 }
 
 /* ========== title */
 
 .type-box {
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 
 .typed {
@@ -53,54 +64,10 @@
   }
 }
 
-/* ========== form */
-
-.prompt-form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 1rem;
-  position: relative;
-}
-
-.prompt-form label {
-  text-align: left;
-  font-size: 2.4rem;
-  margin: 0 0 1rem 1rem;
-  color: grey;
-}
-
-.prompt-form input {
-  font-size: 2.4rem;
-  border: none;
-  height: 4rem;
-  padding: 0.5rem 2rem;
-  border-radius: 50px;
-}
-
-.submit {
-  position: absolute;
-  right: 3px;
-  bottom: 2px;
-  padding: 1rem 1.5rem;
-  letter-spacing: 0.5px;
-  border: none;
-  border-radius: 20px;
-  background-color: grey;
-  color: white;
-  transition: all 0.2s;
-}
-
-.submit:hover {
-  background-color: #212121;
-}
-
-/* ========== responses */
-
 /* ========== clear all button */
 
 .clear-all {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   margin: 4rem 0 2rem 0;
@@ -111,4 +78,26 @@
   border: none;
   background-color: transparent;
   color: grey;
+}
+
+/* ========== footer */
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  bottom: 0;
+  margin-top: 5rem;
+  flex: 1 0 auto;
+}
+
+/* ========== media query */
+
+@media screen and (max-width: 500px) {
+  .app {
+    padding: 0 0 5rem 0;
+  }
+  .typed h1 {
+    font-size: 5.4rem;
+  }
 }

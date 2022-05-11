@@ -3,6 +3,8 @@ import '../CSS/App.css';
 import Modal from './Modal';
 import Responses from './Responses';
 import Form from './Form';
+import ClearButton from './ClearButton';
+import Footer from './Footer';
 import { Configuration, OpenAIApi } from 'openai';
 
 function App() {
@@ -57,22 +59,6 @@ function App() {
       });
   }
 
-  let clearAllButton = null;
-  if (responses && responses.length > 0) {
-    clearAllButton = (
-      <div className='clear-all'>
-        <button
-          className='clear-btn'
-          onClick={() => {
-            setModal(true);
-          }}
-        >
-          Clear all
-        </button>
-      </div>
-    );
-  }
-
   return (
     <div className='app'>
       {modal && <Modal setModal={setModal} setResponses={setResponses} />}
@@ -81,9 +67,14 @@ function App() {
           <h1>Fun with AI!</h1>
         </div>
       </div>
-      <Form onSubmit={onSubmit} setPrompt={setPrompt} loading={loading} />
-      {clearAllButton}
-      <Responses responses={responses} />
+      <div className='app-container'>
+        <Form onSubmit={onSubmit} setPrompt={setPrompt} loading={loading} />
+        {responses && responses.length > 0 ? (
+          <ClearButton setModal={setModal} />
+        ) : null}
+        <Responses responses={responses} />
+      </div>
+      <Footer />
     </div>
   );
 }

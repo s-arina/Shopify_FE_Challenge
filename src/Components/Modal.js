@@ -18,7 +18,7 @@ function Modal({ setModal, setResponses }) {
     <div className='modal-background' id='bg' onClick={closeModal}>
       <div className='modal-container'>
         <h2>Are you sure?</h2>
-        <div className='confirm-btns'>
+        <div className='modal-btns'>
           <button onClick={() => setModal(false)}>Back</button>
           <button onClick={() => clearStorage()}>Yes</button>
         </div>
