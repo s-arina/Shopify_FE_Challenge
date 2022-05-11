@@ -25,7 +25,8 @@ code {
 }
 
 a,
-button {
+button,
+select {
   cursor: pointer;
 }
 

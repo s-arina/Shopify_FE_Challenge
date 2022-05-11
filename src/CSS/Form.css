@@ -37,3 +37,12 @@
 .submit:hover {
   background-color: #212121;
 }
+
+/* ========== media query */
+
+@media screen and (max-width: 500px) {
+  .prompt-form label {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}

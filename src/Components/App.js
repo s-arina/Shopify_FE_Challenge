@@ -3,6 +3,7 @@ import '../CSS/App.css';
 import Modal from './Modal';
 import Responses from './Responses';
 import Form from './Form';
+import Engine from './Engine';
 import ClearButton from './ClearButton';
 import Footer from './Footer';
 import { Configuration, OpenAIApi } from 'openai';
@@ -12,6 +13,7 @@ function App() {
   const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
   const [prompt, setPrompt] = useState('');
+  const [engine, setEngine] = useState('text-davinci-002');
   const [responses, setResponses] = useState([]);
   const [modal, setModal] = useState(false);
   const [loading, setIsLoading] = useState(null);
@@ -23,7 +25,13 @@ function App() {
     }
   }, [prompt]);
 
-  // api call
+  // onChange engine
+  function onChange(e) {
+    e.preventDefault();
+    setEngine(e.target.value);
+  }
+
+  // onSubmit api call
   async function onSubmit(e) {
     e.preventDefault();
     setPrompt(e.target.value);
@@ -38,7 +46,7 @@ function App() {
     const openai = new OpenAIApi(configuration);
 
     openai
-      .createCompletion('text-curie-001', {
+      .createCompletion(`${engine}`, {
         prompt: `User input: ${prompt}`,
         temperature: 0.5,
         max_tokens: 64,
@@ -69,6 +77,7 @@ function App() {
       </div>
       <div className='app-container'>
         <Form onSubmit={onSubmit} setPrompt={setPrompt} loading={loading} />
+        <Engine onChange={onChange} />
         {responses && responses.length > 0 ? (
           <ClearButton setModal={setModal} />
         ) : null}

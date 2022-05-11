@@ -1,0 +1,17 @@
+.engine-select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+  font-size: 1.8rem;
+  color: grey;
+}
+
+.engine-select select {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
