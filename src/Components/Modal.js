@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Modal.css';
+import '../css/Modal.css';
 
 function Modal({ setModal, setResponses }) {
   function clearStorage() {

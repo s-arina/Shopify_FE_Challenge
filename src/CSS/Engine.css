@@ -15,3 +15,11 @@
   padding: 0.5rem 1rem;
   background-color: white;
 }
+
+/* ========== media query */
+
+@media screen and (max-width: 530px) {
+  .engine-select {
+    justify-content: center;
+  }
+}

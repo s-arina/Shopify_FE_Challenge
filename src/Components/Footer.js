@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Footer.css';
+import '../css/Footer.css';
 
 function Footer() {
   return (
@@ -31,9 +31,9 @@ function Footer() {
           className='portfolio'
           viewBox='0 0 24 24'
           stroke='white'
-          stroke-width='1.2'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeWidth='1.2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           fill='none'
         >
           <circle cx='12' cy='12' r='9' />

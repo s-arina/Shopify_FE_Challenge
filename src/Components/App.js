@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import '../CSS/App.css';
+import { Configuration, OpenAIApi } from 'openai';
+import '../css/App.css';
 import Modal from './Modal';
 import Responses from './Responses';
 import Form from './Form';
 import Engine from './Engine';
 import ClearButton from './ClearButton';
 import Footer from './Footer';
-import { Configuration, OpenAIApi } from 'openai';
 
 function App() {
   // api key

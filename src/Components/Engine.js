@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Engine.css';
+import '../css/Engine.css';
 
 function Engine({ onChange }) {
   return (
