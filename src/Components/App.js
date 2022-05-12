@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
-import '../css/App.css';
+import '../CSS/App.css';
 import Modal from './Modal';
 import Responses from './Responses';
 import Form from './Form';
