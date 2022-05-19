@@ -2,6 +2,8 @@
 
 ## Fun with GPT-3
 
+Deployed on: https://sarina-shopify.herokuapp.com
+
 An app that sends plain text prompts to the OpenAI API and displays the results in a list.
 
 - Responses are saved in the user's local storage with the option to clear all results if desired.
