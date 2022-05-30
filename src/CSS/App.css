@@ -29,7 +29,7 @@
   overflow: hidden;
   border-right: 0.7rem solid grey;
   white-space: nowrap;
-  animation: typing 8s steps(18, end) forwards infinite, blink 1.2s infinite;
+  animation: typing 7s steps(18, end) forwards infinite, blink 1.2s infinite;
 }
 
 .typed h1 {
