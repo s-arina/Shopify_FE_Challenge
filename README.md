@@ -2,7 +2,7 @@
 
 ## Fun with GPT-3
 
-Deployed on: https://sarina-shopify.herokuapp.com
+Deployed on: https://sarina-shopify.netlify.com
 
 An app that sends plain text prompts to the OpenAI API and displays the results in a list.
 
